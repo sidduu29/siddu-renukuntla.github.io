@@ -1,0 +1,112 @@
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --accent: #4f46e5;
+  --card: #f1f5f9;
+}
+
+body.dark {
+  --bg: #0b1120;
+  --text: #e5e7eb;
+  --card: #111827;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* HERO FIX: NO 100vh */
+.hero {
+  padding: 3.5rem 1.5rem 2.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+.tagline {
+  margin-top: 0.8rem;
+  max-width: 600px;
+}
+
+.hero-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.outline {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+section {
+  padding: 2.2rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card,
+.project-card {
+  background: var(--card);
+  padding: 1.2rem;
+  border-radius: 16px;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover,
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  opacity: 0.7;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--card);
+  border: none;
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
